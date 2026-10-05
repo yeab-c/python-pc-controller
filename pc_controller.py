@@ -90,7 +90,7 @@ def main():
                 if event_data.get("message").lower() == "ping":
                     ping()
                 elif event_data.get("message")[0:6].lower() == "notify":
-                    notify(event_data.get("message")[8:-1].strip())
+                    notify(event_data.get("message")[7:].strip())
                 elif event_data.get("message")[0:6].lower() == "volume":
                     volume(event_data.get("message")[7:].strip())
                 elif event_data.get("message")[0:10].lower() == "screenshot":
